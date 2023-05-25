@@ -7,11 +7,15 @@
     <title>MyBrary</title>
 </head>
 <body>
-    Before
-    <br>
-        <%- body %>
-    <br>
-    After
-    <br> 
+    
+    
+<%- include ('../partials/header.ejs') %>
+<% if (typeof errorMessage !== 'undefined') { %>
+    <%- include('../partials/errorMessage.ejs') %>
+  <% } %>
+<%- body %>
+    
+    
+ 
 </body>
 </html>
